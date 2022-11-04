@@ -1,0 +1,12 @@
+---
+- name: Installation role users
+  hosts: all
+  become: yes
+  vars:
+           db_user: essai1
+           db_password: essai1
+           db_name: essai1
+  roles:
+          - apache
+          - postgresql
+          - php
