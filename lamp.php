@@ -7,7 +7,7 @@ $table = "essai2";
 
 
 try {
-  $db = new PDO("pgsql:host=192.168.42.130;dbname=$database", $user, $password);
+  $db = new PDO("pgsql:host=localhost;dbname=$database", $user, $password);
   echo "<h2>Regarder la table</h2><ol>";
   foreach($db->query("SELECT id FROM $table") as $row) {
     echo "<li>" . $row['id'] . "</li>";

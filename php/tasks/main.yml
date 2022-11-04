@@ -12,4 +12,5 @@
     - php-mysqlnd
     - php-fpm
     - php-mysqli
+    - php-pgsql
    state: latest
