@@ -7,6 +7,6 @@
            db_password: essai1
            db_name: essai1
   roles:
-          - apache
+          #   - apache
           - postgresql
-          - php
+            # - php

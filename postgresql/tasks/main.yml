@@ -35,11 +35,13 @@
 
 
 
-- name: Create the database specified in vars
-  become: true
+- name: "Create app database"
+  postgresql_db:
+    state: present
+    name: "{{ db_name }}"
+    owner: "{{ db_user }}"
+  become: yes
   become_user: postgres
-  postgresql_db: name={{ db_name }}
-   state=present
 
 - name: Ensure user has access to the new database
   become: true
