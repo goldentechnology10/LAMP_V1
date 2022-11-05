@@ -1,4 +1,8 @@
 ---
-# vars file for postgresql
+# vars file for postgresuser
+#
+db_user: lampp
+db_password: lampp
+db_name: lampp
 
 
