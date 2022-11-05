@@ -1,19 +1,19 @@
 <?php
-$user = "essai1";
-$password = "essai1";
-$database = "essai1";
-$table = "essai2";
-
-
+$user = "lampp";
+$password = "lampp";
+$database = "lampp";
+$table = "test_table";
 
 try {
-  $db = new PDO("pgsql:host=localhost;dbname=$database", $user, $password);
-  echo "<h2>Regarder la table</h2><ol>";
-  foreach($db->query("SELECT id FROM $table") as $row) {
-    echo "<li>" . $row['id'] . "</li>";
+        $db = new PDO("pgsql:host=192.168.52.142;dbname=$database", $user, $password);
+  echo "<h2> Test_table </h2><ol>";
+  foreach($db->query("SELECT * FROM $table") as $row) {
+          echo "<li>"  .$row['id']. '       ' .$row['num']. "</li>";
   }
-  echo "</ol>";
+
+
 } catch (PDOException $e) {
     print "Error!: " . $e->getMessage() . "<br/>";
     die();
 }
+
