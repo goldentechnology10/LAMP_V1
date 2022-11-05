@@ -89,6 +89,16 @@
   #new_owner: "{{ db_user }}"
 
 
+- name: Create test_table
+  postgresql_table:
+    db: "{{ db_name }}"
+    owner: "{{ db_name }}"
+    name: test_table
+    columns:
+    - id bigserial primary key
+    - num bigint
+    - stories text
+  become_user: postgres
 
 
 
